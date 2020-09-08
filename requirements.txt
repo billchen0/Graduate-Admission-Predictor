@@ -1,6 +1,5 @@
 
 Jinja2==2.11.2
-joblib @ file:///tmp/build/80754af9/joblib_1594236160679/work
 Flask==1.1.1
 gunicorn==19.9.0
 pandas==0.25.0

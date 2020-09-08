@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1 {
+  padding: 5rem;
+  font-size: 3rem;
+  color: #fff;
+  font-style: italic;
+}
+
+body {
+  background-image: linear-gradient(rgba(1, 27, 86, 0.8), rgba(1, 27, 86, 0.5)),
+    url(https://cdn.uconnectlabs.com/wp-content/uploads/sites/7/2015/05/istockgraduationmortarboards.jpg);
+  background-size: cover;
+  background-position: center;
+  font-size: 9rem;
+  width: 100vw;
+  height: 100vh;
+  font-size: 2.4rem;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+label {
+  font-size: 0.2rem;
+  display: block;
+}
+
+.form {
+  padding-top: 3rem;
+  width: 60%;
+  display: inline-block;
+}
+
+input {
+  width: 80%;
+  height: 3rem;
+  display: inline-block;
+  margin: 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+}
+
+button {
+  display: inline-block;
+  padding: 2rem;
+  margin-top: 3rem;
+  border-radius: 1rem;
+  border: none;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0.2rem 0.2rem 0.8rem rgba(0, 0, 0, 0.3);
+}
+
+button:focus {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+p {
+  color: #fff;
+  font-style: italic;
+  padding: 0.2rem;
+}
+
+.footer_text {
+  font-size: 1rem;
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.introduction {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graduate School Admission Prediction</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/styles.css')
+    }}"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <h1>Graduate School Admission Predictor</h1>
+    <p class="introduction">
+      The predictor is built with a machine learning model using the following
+      <a
+        class="link"
+        href="https://www.kaggle.com/mohansacharya/graduate-admissions"
+        >dataset.</a
+      >
+    </p>
+
+    <form class="form" action="{{ url_for('predict') }}" method="POST">
+      <input
+        type="number"
+        name="GRE Score"
+        placeholder="GRE Score (260-340)"
+        min="260"
+        max="340"
+        required
+      />
+      <input
+        type="number"
+        name="TOEFL Score"
+        placeholder="TOFEL (0-120); Native English Speaker Input 120 As Score"
+        min="0"
+        max="120"
+        required
+      />
+      <input
+        type="number"
+        name="University Rating"
+        placeholder="University Rating (1-5) (Ex: Penn State = ~4)"
+        min="1"
+        max="5"
+        step="1"
+        required
+      />
+      <input
+        type="number"
+        name="SOP"
+        placeholder="Statement of Purpose (Strength: 1-5)"
+        min="1"
+        max="5"
+        step="0.5"
+        required
+      />
+      <input
+        type="number"
+        name="LOR"
+        placeholder="Letter of Recommendation (Strength: 1-5)"
+        min="1"
+        max="5"
+        step="0.5"
+        required
+      />
+      <input type="number" name="CGPA" placeholder="CGPA (1-10)" required />
+      <input
+        type="number"
+        name="Research"
+        placeholder="Research Experience (0=no, 1=yes)"
+        min="0"
+        max="1"
+        step="0.1"
+        required
+      />
+      <br />
+      <button type="submit">Predict Admission Chance</button>
+    </form>
+
+    <br />
+    <br />
+    <p class="prediction_text">{{ prediction_text }}</p>
+    <p>Good Luck!</p>
+  </body>
+
+  <footer>
+    <p class="footer_text">© 2020 Bill Chen. All Rights Reserved.</p>
+  </footer>
+</html>

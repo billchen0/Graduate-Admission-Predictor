@@ -9,7 +9,7 @@ model = load("final_model.pkl")
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return "hello"
 
 
 @app.route('/predict', methods=['POST'])

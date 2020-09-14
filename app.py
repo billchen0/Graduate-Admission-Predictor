@@ -7,7 +7,7 @@ pipeline = load("pipeline.pkl")
 model = load("final_model.pkl")
 
 
-@app.route('/')
+@app.route('/', methods=['POST'])
 def home():
     return render_template('index.html')
 
@@ -36,4 +36,4 @@ def results():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()

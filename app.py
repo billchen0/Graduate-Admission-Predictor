@@ -7,7 +7,7 @@ pipeline = load("pipeline.pkl")
 model = load("final_model.pkl")
 
 
-@app.route('/', methods=['POST'])
+@app.route('/', methods=['GET'])
 def home():
     return render_template('index.html')
 

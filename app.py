@@ -2,12 +2,14 @@ import numpy as np
 from flask import Flask, request, jsonify, render_template
 from joblib import load
 
-app = Flask(__name__)
 pipeline = load("pipeline.pkl")
 model = load("final_model.pkl")
 
+# app
+app = Flask(__name__)
 
-@app.route('/')
+# routes
+@app.route('/', methods=['GET'])
 def home():
     return render_template("index.html")
 
@@ -36,4 +38,4 @@ def results():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(port = 5000, debug=True)

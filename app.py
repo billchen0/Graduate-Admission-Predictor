@@ -9,8 +9,8 @@ model = load("final_model.pkl")
 app = Flask(__name__)
 
 # routes
-@app.route('/', methods=['GET'])
-def home():
+@app.route('/', methods=['GET', 'POST'])
+def main():
     return render_template("index.html")
 
 
@@ -38,4 +38,4 @@ def results():
 
 
 if __name__ == "__main__":
-    app.run(port = 5000, debug=True)
+    app.run()
